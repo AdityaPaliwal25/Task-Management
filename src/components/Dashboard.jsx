@@ -5,9 +5,9 @@ import TaskCard from "./TaskCard";
 import "./Dashboard.css";
 import {Link, useNavigate} from 'react-router-dom'
 
-const Dashboard = () => {
+const Dashboard = ({tasks,setTasks}) => {
   const [isTaskFormOpen, setIsTaskFormOpen] = useState(false);
-  const [tasks, setTasks] = useState([]);
+  // const [tasks, setTasks] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [activeFilter, setActiveFilter] = useState("All");
 
@@ -35,7 +35,7 @@ const Dashboard = () => {
     const matchesFilter = activeFilter === "All" || task.status === activeFilter;
     return matchesSearch && matchesFilter;
   });
-
+console.log("Tasks ind ",tasks);
   return (
     <main className="main-content">
       {/* Header Section */}
@@ -78,7 +78,7 @@ const Dashboard = () => {
           <p className="stat-number">{tasks.filter(task => task.status === "Completed").length}</p>
         </div>
         <div className="stat-card">
-          <h3>Upcoming Deadlines</h3>
+          <h3>Backlogs</h3>
           <p className="stat-number">{tasks.filter(task => new Date(task.deadline) > new Date()).length}</p>
         </div>
       </div>
