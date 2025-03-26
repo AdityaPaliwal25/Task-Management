@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import "./TaskForm.css";
-
+import { v4 as uuidv4 } from 'uuid';
 const TaskForm = ({ onAddTask }) => {
+  let todayDate = new Date().toISOString().split("T")[0];
   const [task, setTask] = useState({
+    id:uuidv4(),
     title: "",
     description: "",
+    startDate: todayDate,
     dueDate: "",
     assignee: "",
     priority: "Medium",
@@ -21,9 +24,8 @@ const TaskForm = ({ onAddTask }) => {
     e.preventDefault();
     if (!task.title.trim()) return;
     onAddTask(task); // Send task to parent (TaskBoard)
-    setTask({ title: "", description: "", dueDate: "", assignee: "", priority: "Medium", status: "To Do", subtasks: { completed: 0, total: 0 }, recurring: false }); // Reset form
+    setTask({ id: "",title: "", description: "",startDate:"", dueDate: "", assignee: "", priority: "Medium", status: "To Do", subtasks: { completed: 0, total: 0 }, recurring: false }); // Reset form
   };
-
   return (
     <div className="modal-overlay">
       <div className="modal">
