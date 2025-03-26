@@ -7,8 +7,8 @@ const Sidebar = () => {
 
   const navItems = [
     { name: 'Dashboard', icon: 'fa-house', path :"/" },
-    { name: 'My Tasks', icon: 'fa-list-check' ,path:"/MyTask"},
-    { name: 'Calendar', icon: 'fa-calendar' ,path:"/Calender"},
+    { name: 'My Tasks', icon: 'fa-list-check' ,path:"/MyTasks"},
+    { name: 'Calendar', icon: 'fa-calendar' ,path:"/Calendar"},
     { name: 'Recurring Tasks', icon: 'fa-repeat' ,},
     { name: 'Teams', icon: 'fa-users',path:"/Teams" },
     { name: 'Templates', icon: 'fa-file-lines' ,path:"/Templates"},

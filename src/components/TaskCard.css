@@ -118,3 +118,44 @@
   cursor: pointer;
   text-decoration: underline;
 }
+.pomodoro-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  background: #1e293b;
+  color: #f8fafc;
+  border-radius: 8px;
+}
+
+.pomodoro-timer h4 {
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.pomodoro-timer p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.pomodoro-btn {
+  margin-top: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.start {
+  background: #4caf50;
+  color: white;
+}
+
+.stop {
+  background: #e63946;
+  color: white;
+}
