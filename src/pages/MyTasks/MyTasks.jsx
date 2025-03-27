@@ -64,7 +64,7 @@ const MyTasks = ({ tasks, setTasks }) => {
                           ref={provided.innerRef}
                           {...provided.draggableProps}
                           {...provided.dragHandleProps}
-                          className={`task-card ${taskColors[status]}`}
+                          className={`tasks-card ${taskColors[status]}`}
                         >
                           <h4>{task.title || "Untitled Task"}</h4>
                         </div>
