@@ -1,5 +1,5 @@
 .task-card {
-  background-color: #1e2a47;
+  background-color: #3B4F71;
   border-radius: 10px;
   padding: 16px;
   margin: 10px;
@@ -72,17 +72,17 @@
 }
 
 .High {
-  background-color: #e74c3c;
+  background-color: #EF476F;
   color: white;
 }
 
 .Medium {
-  background-color: #f1c40f;
+  background-color: #E9C46A;
   color: black;
 }
 
 .Low {
-  background-color: #3498db;
+  background-color: #A0AEC0;
   color: white;
 }
 
@@ -121,18 +121,19 @@
 .pomodoro-timer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
+  /* align-items: center; */
+  margin-top: 30px;
   padding: 10px;
-  background: #1e293b;
-  color: #f8fafc;
+  /* background: #1e293b; */
+  color: #fff;
   border-radius: 8px;
 }
 
 .pomodoro-timer h4 {
   margin: 5px 0;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 13px !important;
+  font-weight:300;
+  color: #b0c4de;
 }
 
 .pomodoro-timer p {
@@ -151,11 +152,11 @@
 }
 
 .start {
-  background: #4caf50;
-  color: white;
+  background: #58d68c;
+  color: #283953;
 }
 
 .stop {
-  background: #e63946;
-  color: white;
+  background: #ef476e;
+  color: #283953;
 }
