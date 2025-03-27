@@ -37,12 +37,12 @@
   }
   
   .nav-item:hover {
-    background-color: var(--steel-blue);
+    background-color: #4A5A75;
     color: var(--white);
   }
   
   .nav-item.active {
-    background-color: var(--steel-blue);
+    background-color:#4A5A75;
     color: var(--white);
   }
   
