@@ -31,7 +31,7 @@ function App() {
         startDate: todayDate,
         dueDate: "2025-03-30",
         assignee: "",
-        priority: "Medium",
+        priority: "High",
         status: "To Do", // Default status
         subtasks: { completed: 0, total: 0 },
         recurring: false, // Default false
