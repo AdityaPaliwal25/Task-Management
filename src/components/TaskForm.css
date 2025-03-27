@@ -48,3 +48,8 @@
 .modal button:hover {
   background-color: #45b76f;
 }
+.btndiv{
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
