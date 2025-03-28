@@ -7,7 +7,7 @@
   }
   
   .reports-page h1 {
-    font-size: 24px;
+    /* font-size: 24px; */
     font-weight: 600;
     color: #f0f9ff;
     margin-bottom: 20px;
@@ -42,13 +42,6 @@
     /* background-color: #000a1b57; */
     border-radius: 12px;
     padding: 20px;
-  }
-  
-  .report-card h2 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #60a5fa;
-    margin-bottom: 15px;
   }
   .summary-container {
     background: #1e293b;
