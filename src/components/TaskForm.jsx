@@ -42,8 +42,11 @@ const TaskForm = ({ onAddTask,onClose }) => {
           <label>Assignee</label>
           <select name="assignee" value={task.assignee} onChange={handleChange}>
             <option value="">Select assignee</option>
-            <option value="John Doe">John Doe</option>
-            <option value="Jane Smith">Jane Smith</option>
+            <option value="Alice Johnson">Alice Johnson</option>
+            <option value="Bob Williams">Bob Williams</option>
+            <option value="Charlie Smith">Charlie Smith</option>
+            <option value="David Brown">David Brown</option>
+
           </select>
 
           <label>Priority</label>
