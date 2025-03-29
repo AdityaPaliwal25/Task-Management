@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./TaskForm.css";
 import { v4 as uuidv4 } from 'uuid';
-const TaskForm = ({ onAddTask }) => {
+const TaskForm = ({ onAddTask,onClose }) => {
   let todayDate = new Date().toISOString().split("T")[0];
   const [task, setTask] = useState({
     id:uuidv4(),
@@ -15,7 +15,6 @@ const TaskForm = ({ onAddTask }) => {
     subtasks: { completed: 0, total: 0 },
     recurring: false, // Default false
   });
-
   const handleChange = (e) => {
     setTask({ ...task, [e.target.name]: e.target.value });
   };
@@ -35,16 +34,19 @@ const TaskForm = ({ onAddTask }) => {
           <input type="text" name="title" placeholder="Enter task title" value={task.title} onChange={handleChange} required />
 
           <label>Description</label>
-          <textarea name="description" placeholder="Enter task description" value={task.description} onChange={handleChange}></textarea>
+          <textarea name="description" placeholder="Enter task description" value={task.description} onChange={handleChange} required></textarea>
 
           <label>Due Date</label>
-          <input type="date" name="dueDate" value={task.dueDate} onChange={handleChange} />
+          <input type="date" name="dueDate" value={task.dueDate} onChange={handleChange} required />
 
           <label>Assignee</label>
           <select name="assignee" value={task.assignee} onChange={handleChange}>
             <option value="">Select assignee</option>
-            <option value="John Doe">John Doe</option>
-            <option value="Jane Smith">Jane Smith</option>
+            <option value="Alice Johnson">Alice Johnson</option>
+            <option value="Bob Williams">Bob Williams</option>
+            <option value="Charlie Smith">Charlie Smith</option>
+            <option value="David Brown">David Brown</option>
+
           </select>
 
           <label>Priority</label>
@@ -53,8 +55,10 @@ const TaskForm = ({ onAddTask }) => {
             <option>Medium</option>
             <option>High</option>
           </select>
-
+          <div className="btndiv">
           <button type="submit" className="btn-create">Create Task</button>
+          <button onClick={onClose} style={{background:"#EF476F"}}>Cancel</button>
+          </div>
         </form>
       </div>
     </div>
