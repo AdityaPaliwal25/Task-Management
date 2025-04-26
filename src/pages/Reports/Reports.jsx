@@ -45,7 +45,7 @@ const Reports = ({ tasks }) => {
   return (
     <div className="reports-page">
       <h1>
-        Task Reports{" "}
+        Tasks Report{" "}
       </h1>
         <p className="summary-section">
           <span>Total Tasks: {tasks.length}</span>
@@ -72,10 +72,11 @@ const Reports = ({ tasks }) => {
             <CustomLegend />
             <ResponsiveContainer width="100%" height={400}>
               <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
-                <XAxis type="category" dataKey="assignee" name="Team Member" />
+                 {/* <CartesianGrid strokeDasharray="3 3" horizontal stroke="#334155" /> */}
+            <XAxis type="category" dataKey="assignee" name="Team Member" />
                 <YAxis type="number" dataKey="taskCount" name="Tasks Assigned" allowDecimals={false} />
-                <Tooltip cursor={{ strokeDasharray: "3 3" }} />
-                <Scatter name="Workload" data={workloadData} fill="#8884d8">
+                <Tooltip cursor={{ strokeDasharray: "3 3" }}/>
+                <Scatter name="Workload" data={workloadData}>
                   {workloadData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={getColor(entry.taskCount)} />
                   ))}

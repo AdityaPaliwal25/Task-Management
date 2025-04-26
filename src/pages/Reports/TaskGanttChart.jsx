@@ -50,11 +50,11 @@ const TaskGanttChart = ({ tasks }) => {
   const ganttData = prepareGanttData();
   return (
     <div className="gantt-chart-container">
-      <ResponsiveContainer width="100%" height={400} >
+      <ResponsiveContainer width="100%" height={425} >
         <BarChart
           layout="vertical"
           data={ganttData}
-          margin={{ left: 80, right: 20, bottom: 20, top: 20 }}
+          margin={{ left: 0, right: 20, bottom: 20, top: 20 }}
         >
           <CartesianGrid 
             strokeDasharray="3 3" 
@@ -80,7 +80,7 @@ const TaskGanttChart = ({ tasks }) => {
           />
           <Bar 
             dataKey="duration" 
-            fill="#283953"
+            fill="#7289A4"
             barSize={30}
            
           />

@@ -1,5 +1,5 @@
 .gantt-chart-container {
-    background-color: #8EA2C6;
+    /* background-color: #8EA2C6; */
     border-radius: 12px;
     padding: 20px;
     height: 100%;
@@ -11,16 +11,16 @@
   }
   
   .recharts-cartesian-grid line {
-    stroke: #000;
+    stroke: #7289a46f;
   }
   
   .recharts-cartesian-axis-tick text {
-    fill: #000;
+    fill: #fff;
     font-size: 12px;
   }
   
   .recharts-cartesian-axis-line {
-    stroke: #000;
+    stroke: #7289a461;
   }
   
   .recharts-legend-wrapper {

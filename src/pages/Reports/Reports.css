@@ -48,14 +48,9 @@
     padding: 20px;
     border-radius: 10px;
     color: white;
-  }
-  
+  } 
   .summary-section {
     margin-bottom: 20px;
     text-align: center;
-  }
-  .piechartdiv{
-    display: flex;
-    justify-content: space-evenly;
   }
   
