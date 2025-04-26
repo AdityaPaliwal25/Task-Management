@@ -12,7 +12,6 @@ const TaskForm = ({ onAddTask,onClose }) => {
     assignee: "",
     priority: "Medium",
     status: "To Do", // Default status
-    subtasks: { completed: 0, total: 0 },
     recurring: false, // Default false
   });
   const handleChange = (e) => {
@@ -23,7 +22,7 @@ const TaskForm = ({ onAddTask,onClose }) => {
     e.preventDefault();
     if (!task.title.trim()) return;
     onAddTask(task); // Send task to parent (TaskBoard)
-    setTask({ id: "",title: "", description: "",startDate:"", dueDate: "", assignee: "", priority: "Medium", status: "To Do", subtasks: { completed: 0, total: 0 }, recurring: false }); // Reset form
+    setTask({ id: "",title: "", description: "",startDate:"", dueDate: "", assignee: "", priority: "Medium", status: "To Do",recurring: false }); // Reset form
   };
   return (
     <div className="modal-overlay">
@@ -33,8 +32,8 @@ const TaskForm = ({ onAddTask,onClose }) => {
           <label>Task Title</label>
           <input type="text" name="title" placeholder="Enter task title" value={task.title} onChange={handleChange} required />
 
-          <label>Description</label>
-          <textarea name="description" placeholder="Enter task description" value={task.description} onChange={handleChange} required></textarea>
+          <label>Description <span style={{opacity:"0.7",fontSize:"0.8rem"}}>(optional)</span></label>
+          <textarea name="description" placeholder="Enter task description" value={task.description} onChange={handleChange}></textarea>
 
           <label>Due Date</label>
           <input type="date" name="dueDate" value={task.dueDate} onChange={handleChange} required />

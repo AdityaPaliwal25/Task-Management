@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from "react";
 import "./TaskCard.css";
-
+import { useNavigate } from "react-router-dom";
 const TaskCard = ({ task }) => {
-  const { id, title, description, priority, status, subtasks, dueDate, assignee, recurring } = task;
 
-  const progressWidth = subtasks ? (subtasks.completed / subtasks.total) * 100 : 0;
+  const navigate = useNavigate();
+  const handleDetailsClick = () => {
+    navigate(`/task/${task.id}`);
+  };
 
+  const { id, title, description, priority, status, dueDate, assignee, recurring } = task;
+
+//   const progressWidth = subtasks ? (subtasks.completed / subtasks.total) * 100 : 0;
+// console.log("subtask",subtasks);
   // Pomodoro Timer State
   const [timeLeft, setTimeLeft] = useState(25 * 60); // 25 minutes in seconds
   const [isRunning, setIsRunning] = useState(false);
@@ -46,14 +52,12 @@ const TaskCard = ({ task }) => {
 
       <div className="task-description">{description}</div>
 
-      {subtasks.total !== 0 && (
-        <>
-          <div className="subtasks">
+     
+
+          {/* <div className="subtasks">
             <div className="subtasks-progress" style={{ width: `${progressWidth}%` }}></div>
           </div>
-          <div className="subtasks-text">Subtasks ({subtasks.completed}/{subtasks.total})</div>
-        </>
-      )}
+            <div className="subtasks-text">Subtasks ({subtasks.completed}/{subtasks.total})</div> */}
 
       <div className="task-tags">
         <span className={`tag ${priority}`}>{priority}</span>
@@ -79,7 +83,7 @@ const TaskCard = ({ task }) => {
         </button>
       </div>
 
-      <button className="details-btn">Details</button>
+      <button className="details-btn" onClick={handleDetailsClick}>Details</button>
     </div>
   );
 };

@@ -9,10 +9,11 @@ const Sidebar = () => {
     { name: 'Dashboard', icon: 'fa-house', path :"/" },
     { name: 'My Tasks', icon: 'fa-list-check' ,path:"/MyTasks"},
     { name: 'Calendar', icon: 'fa-calendar' ,path:"/Calendar"},
-    { name: 'Recurring Tasks', icon: 'fa-repeat' ,},
+    { name: 'Reports', icon: 'fa-chart-line',path:"/Reports" },
     { name: 'Teams', icon: 'fa-users',path:"/Teams" },
     { name: 'Templates', icon: 'fa-file-lines' ,path:"/Templates"},
-    { name: 'Reports', icon: 'fa-chart-line',path:"/Reports" },
+    { name: 'Recurring Tasks', icon: 'fa-repeat',path:"/RecurTask"},
+    { name: 'Settings', icon: 'fa-gear',path:"/Setting"},
   ];
   const navigate = useNavigate();
 
@@ -38,10 +39,10 @@ const Sidebar = () => {
           </li>
         ))}
         
-        <li className="nav-item settings">
+        {/* <li className="nav-item settings">
           <i className="fa-solid fa-gear"></i>
           <span>Settings</span>
-        </li>
+        </li> */}
       </ul>
       
       <div className="user-profile">
