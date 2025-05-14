@@ -52,9 +52,6 @@ const Dashboard = ({tasks,setTasks}) => {
       alert("Failed to save task.");
     }
   };
-  
-  
-
   // Filter Tasks Based on Search & Status
   const filteredTasks = tasks.filter(task => {
     const matchesSearch = task.title.toLowerCase().includes(searchQuery.toLowerCase());
@@ -90,20 +87,20 @@ console.log("Tasks ind ",tasks);
       {isTaskFormOpen && <TaskForm onClose={closeTaskForm} onAddTask={addTask} />}
 
       {/* Dashboard Stats */}
-      <div className="dashboard-stats">
-        <div className="stat-card">
+      <div className="row dashboard-stats">
+        <div className="col col-md-3 stat-card">
           <h3>Total Tasks</h3>
           <p className="stat-number">{tasks.length}</p>
         </div>
-        <div className="stat-card">
+        <div className="col col-md-3 stat-card">
           <h3>In Progress</h3>
           <p className="stat-number">{tasks.filter(task => task.status === "In Progress").length}</p>
         </div>
-        <div className="stat-card">
+        <div className="col col-md-3 stat-card">
           <h3>Completed</h3>
           <p className="stat-number">{tasks.filter(task => task.status === "Completed").length}</p>
         </div>
-        <div className="stat-card">
+        <div className="col col-md-3 stat-card">
           <h3>Backlogs</h3>
           <p className="stat-number">{tasks.filter(task => task.dueDate < todayDate).length}</p>
         </div>
