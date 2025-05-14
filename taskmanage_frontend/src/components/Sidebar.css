@@ -1,4 +1,4 @@
-.sidebar {
+.sidebar_menu {
     width: 250px;
     background-color: var(--charcoal-blue);
     border-right: 1px solid var(--steel-blue);
@@ -13,8 +13,8 @@
     align-items: center;
     color: var(--warm-sand);
     margin-bottom: 30px;
+    justify-content: space-between;
   }
-  
   .logo i {
     font-size: 24px;
     margin-right: 10px;
@@ -85,3 +85,49 @@
     font-size: 12px;
     color: var(--text-light);
   }
+
+.btn_one i{
+    color: white;
+    font-size:20px;
+    font-weight: 700px;
+    /* position: absolute; */
+    /* left: 16px; */
+    line-height: 60px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    margin-left: 1rem;
+    margin-top: 0.6rem;
+}
+.btn_one ,.btn_two ,#check{
+  display: none;
+}
+
+@media(max-width:700px){
+  .sidebar_menu{
+    position: fixed;
+    z-index: 1000;
+    left: -300px;
+    height: 100vh;
+    width: 300px;
+    transition: all 0.3s linear;
+}
+.sidebar_menu .btn_two i{
+    font-size: 25px;
+    line-height: 60px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+.btn_one,.btn_two{
+  display: inline;
+}
+#check:checked ~ .sidebar_menu {
+    left:0;
+}
+#check:checked ~ .btn_one i{
+    display: none;
+}
+#check:checked ~ .sidebar_menu .btn_two i{
+    opacity: 1;
+}
+}

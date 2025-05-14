@@ -66,7 +66,7 @@ console.log("Tasks ind ",tasks);
     <main className="main-content">
       {/* Header Section */}
       <header className="header">
-        <h1>Task Management</h1>
+        {/* <h1>Task Management</h1> */}
         <div className="header-actions">
           {/* Search Bar */}
           <div className="search-bar">

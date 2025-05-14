@@ -18,10 +18,27 @@ const Sidebar = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className="sidebar">
-      <div className="logo">
-        <i className="fa-solid fa-square-check"></i>
-        <h2>Sort</h2>
+    <div className="main_box">
+    <input type="checkbox" id="check" />
+      <div className="btn_one">
+        <label htmlFor="check" style={{color:"white"}}>
+          <i className="fa-solid fa-bars"></i>
+        </label>
+      </div>
+    <nav className="sidebar_menu">
+      <input type="checkbox" id="check" />
+      {/* <div className="btn_one">
+        <label htmlFor="check" style={{color:"white"}}>
+          <i className="fa-solid fa-bars"></i>
+        </label>
+      </div> */}
+      <div className="logo">     
+        <h2> <i className="fa-solid fa-square-check"></i> Sort</h2>
+         <div className="btn_two">
+          <label htmlFor="check">
+            <i className="fa-solid fa-xmark"></i>
+          </label>
+        </div>
       </div>
       
       <ul className="nav-items">
@@ -53,6 +70,7 @@ const Sidebar = () => {
         </div>
       </div>
     </nav>
+    </div>
   );
 };
 
